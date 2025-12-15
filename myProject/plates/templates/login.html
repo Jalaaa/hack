@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+The Ticket Login
+{% endblock %}
+
+{% block content %}
+    <div class="main_div">
+        <h1>Login to see your Plates</h1>
+        <form method='POST' action="/login">
+            <div class="mb-3">
+                <label for="username" class="form-label">User-name</label>
+                <input type="text" class="form-control" id="Username" name="Username">
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="Password" name="Password">
+            </div>
+            <button type="submit" id="submit" class="btn btn-dark">Submit</button>
+
+            <a class="btn btn-btn-link" href="register">I want to Register now</a>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Plates
+{% endblock %}
+
+{% block login %}
+    {% if cookie %}
+    <h1 style="color:blue" > Hello {{cookie}}, you are logged in</h1>
+    {% else %}
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    <div class="main_div">
+        <h1>The Licence Plate ColleCtor</h1>
+        <p>
+        This is THE website to Cellect your Licenece Plates <br>
+        you can Collect them when ever you see one, an while you Collect them you can Learn them to geht the best Dad in knowing Citys
+        </p>
+    </div>
+{% endblock %}

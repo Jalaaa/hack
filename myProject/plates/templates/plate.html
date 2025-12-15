@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Plate
+{% endblock %}
+
+{% block content %}
+    <div class="main_div">
+        <h1>Plates By Abbreviation</h1>
+        <div id="search_div">
+            <form class="d-flex" role="search" method="get" action="/plate">
+                <input class="form-control me-2" type="text" placeholder="Search by Abbrevation"  id="kuerzel" name="kuerzel"/>
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Abbreviation</th>
+                    <th scope="col">City</th>
+                    <th scope="col">Bundesland</th>
+                    <th scope="col">Country</th>
+                </tr>
+            </thead>
+            <tbody>
+               {% for item in items %}
+               <tr>
+                   <td>{{item[1]}}</td>
+                   <td>{{item[2]}}</td>
+                   <td>{{item[3]}}</td>
+                   <td>{{item[4]}}</td>
+                   <td>{{item[5]}}</td>
+               </tr>
+               {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

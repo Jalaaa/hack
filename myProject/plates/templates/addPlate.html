@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block title %}
+adding plates
+{% endblock %}
+
+{% block content %}
+    <div class="main_div">
+        <h3>Add your Plates here</h3>
+        <form action="/addPlate" method="POST">
+          <div class="mb-3">
+              <label for="kuerzel" class="form-label">abbreviation</label>
+              <input type="text" class="form-control" id="kuerzel" name="kuerzel">
+          </div>
+          <div class="mb-3">
+              <label for="city" class="form-label">city</label>
+                  <input type="text" class="form-control" id="city" name="city">
+          </div>
+          <div class="mb-3">
+              <label for="bundesland" class="form-label">bundesland</label>
+              <input type="text" class="form-control" id="bundesland" name="bundesland">
+          </div>
+          <div class="mb-3">
+              <label for="country" class="form-label">country</label>
+                  <input type="text" class="form-control" id="country" name="country">
+          </div>
+        <button type="submit" class="btn btn-success">Add new plate</button>
+        </form>
+    </div>
+{% endblock %}
